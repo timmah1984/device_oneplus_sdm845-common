@@ -97,6 +97,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.devicesettings.rc \
     init.qcom.rc \
+    init.safailnet.rc \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
 
