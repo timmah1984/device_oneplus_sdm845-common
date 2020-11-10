@@ -97,7 +97,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap \
+    GoogleCamera \
     libcvface_api \
     libqti-perfd-client
 
