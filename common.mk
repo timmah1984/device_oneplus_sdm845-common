@@ -148,11 +148,12 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    libdisplayconfig \
+    libdisplayconfig.qti \
     libqdMetaData \
     libqdMetaData.system \
     libvulkan \
-    vendor.display.config@1.0
+    vendor.display.config@1.0 \
+    vendor.display.config@2.0
 
 # Display Calibration
 PRODUCT_COPY_FILES += \
@@ -206,6 +207,9 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vendor/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vendor/etc/media_codecs_google_video.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vendor/etc/media_codecs_google_video_le.xml
+
+PRODUCT_PACKAGES += \
+    libavservices_minijail
 
 # Net
 PRODUCT_PACKAGES += \
