@@ -169,7 +169,7 @@ public class DeviceSettings extends PreferenceFragment
             Utils.enableService(getContext());
         } else if (preference == mHBMModeSwitch) {
             Boolean enabled = (Boolean) newValue;
-            Utils.writeValue(HBMModeSwitch.getFile(), enabled ? "5" : "0");
+            Utils.writeValue(HBMModeSwitch.getFile(), enabled ? "1" : "0");
             Intent hbmIntent = new Intent(this.getContext(),
                     org.corvus.device.DeviceSettings.HBMModeService.class);
             if (enabled) {
