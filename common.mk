@@ -200,12 +200,6 @@ PRODUCT_BOOT_JARS += oneplus-mock
 # QCOM Hardware
 PRODUCT_USES_QCOM_HARDWARE := true
 
-# RCS
-PRODUCT_PACKAGES += \
-    com.android.ims.rcsmanager \
-    PresencePolling \
-    RcsService
-
 # Power
 PRODUCT_PACKAGES += \
     power.qcom:64
