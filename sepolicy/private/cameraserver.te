@@ -1,1 +1,1 @@
-allow cameraserver corvus_data_file:file { getattr open write };
+allow cameraserver kangos_data_file:file { getattr open write };
