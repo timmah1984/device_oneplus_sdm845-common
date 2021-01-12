@@ -104,6 +104,9 @@ PRODUCT_PACKAGES += \
     vendor.oneplus.camera.CameraHIDL@1.0-adapter-helper \
     vendor.oneplus.camera.CameraHIDL-V1.0-java
 
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/prebuilt/etc/permissions/com.google.android.GoogleCamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.google.android.GoogleCamera.xml
+
 # Common init scripts
 PRODUCT_PACKAGES += \
     init.devicesettings.rc \
