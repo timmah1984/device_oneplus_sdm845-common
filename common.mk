@@ -205,6 +205,8 @@ PRODUCT_PACKAGES += \
     RemovePackages
 
 # Soong namespaces
+PRODUCT_BOARD_PLATFORM := sdm845
+PRODUCT_USES_QCOM_HARDWARE := true
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     device/oneplus/common \
