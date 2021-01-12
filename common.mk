@@ -26,7 +26,7 @@ $(call inherit-product, vendor/addons/oneplus/apps/config.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-corvus
+    $(LOCAL_PATH)/overlay-kangos
 
 PRODUCT_PACKAGES += \
     OnePlusIconShapeCircleOverlay \
@@ -141,6 +141,11 @@ PRODUCT_PACKAGES += \
     libhwbinder.vendor \
     libhwbinder
 
+# HALS
+SRC_AUDIO_HAL_DIR := hardware/qcom-caf/sdm845/audio
+SRC_DISPLAY_HAL_DIR := hardware/qcom-caf/sdm845/display
+SRC_MEDIA_HAL_DIR := hardware/qcom-caf/sdm845/media
+
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-hotword.xml
@@ -199,6 +204,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     device/oneplus/common \
+    hardware/qcom-caf/sdm845/video \
+    hardware/qcom-caf/sdm845/audio \
+    hardware/qcom-caf/sdm845/media \
+    hardware/qcom-caf/wlan \
+    hardware/qcom-caf/thermal \
+    hardware/qcom-caf/common \
     vendor/qcom/opensource/commonsys/packages/apps/Bluetooth \
     vendor/qcom/opensource/commonsys/system/bt/conf
 
