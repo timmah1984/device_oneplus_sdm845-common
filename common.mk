@@ -140,6 +140,10 @@ PRODUCT_COPY_FILES += \
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
+# GoogleCamera Permissions
+PRODUCT_COPY_FILES += \
+   $(LOCAL_PATH)/permissions/privapp-permissions-googlcam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-googlecam.xml
+
 # HIDL
 PRODUCT_PACKAGES += \
     libhidltransport \
