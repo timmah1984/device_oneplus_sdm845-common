@@ -90,12 +90,36 @@ PRODUCT_COPY_FILES += \
 
 # Common init scripts
 PRODUCT_PACKAGES += \
+    coredump.sh \
+    ftm_power_config.sh \
+    init.class_main.sh \
+    init.crda.sh \
+    init.mdm.sh \
+    init.oem.debug.rc \
+    init.oem.rc \
+    init.qcom.class_core.sh \
+    init.qcom.coex.sh \
+    init.qcom.crashdata.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.efs.sync.sh \
+    init.qcom.factory.rc \
+    init.qcom.post_boot.sh \
+    init.qcom.rc \
+    init.qcom.sdio.sh \
+    init.qcom.sensors.sh \
+    init.qcom.sh \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh \
+    init.qti.fm.sh \
+    init.qti.ims.sh \
+    init.target.rc \
+    kmemleak.sh \
+    ueventd.rc \
+    ueventd.qcom.rc \
     init.devicesettings.rc \
     init.opcamera.rc \
-    init.qcom.rc \
     init.recovery.qcom.rc \
-    init.smartcharging.rc \
-    ueventd.qcom.rc
+    init.smartcharging.rc
 
 # Device Settings
 PRODUCT_PACKAGES += \
