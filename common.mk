@@ -217,9 +217,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom-caf/sdm845/media \
     hardware/qcom-caf/wlan \
     hardware/qcom-caf/thermal \
-    hardware/qcom-caf/common \
-    vendor/qcom/opensource/commonsys/packages/apps/Bluetooth \
-    vendor/qcom/opensource/commonsys/system/bt/conf
+    hardware/qcom-caf/common
 
 # Telephony
 PRODUCT_PACKAGES += \
