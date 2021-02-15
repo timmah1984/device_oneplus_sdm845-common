@@ -273,3 +273,7 @@ PRODUCT_BOOT_JARS += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/privapp-permissions-wfd.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-wfd.xml
+
+# KangOS specific properties
+PRODUCT_PRODUCT_PROPERTIES += \
+  ro.kangos.cpu=SDM845
