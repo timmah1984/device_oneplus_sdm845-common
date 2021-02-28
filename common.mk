@@ -28,13 +28,6 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-evolution
 
-PRODUCT_PACKAGES += \
-    OnePlusIconShapeCircleOverlay \
-    OnePlusIconShapeRoundedRectOverlay \
-    OnePlusIconShapeSquareOverlay \
-    OnePlusIconShapeSquircleOverlay \
-    OnePlusIconShapeTeardropOverlay
-
 # Properties
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
