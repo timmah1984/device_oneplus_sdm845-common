@@ -231,6 +231,9 @@ PRODUCT_BOOT_JARS += oneplus-mock
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/power/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
+
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
     RemovePackages
