@@ -1,6 +1,9 @@
 # Apex
 ro.apex.updatable=true
 
+# ADB
+ro.boot.adb=true
+
 # Audio
 vendor.audio_hal.period_size=192
 ro.vendor.audio.sdk.fluencetype=fluence
