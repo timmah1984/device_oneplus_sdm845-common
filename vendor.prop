@@ -118,7 +118,7 @@ ro.sf.lcd_density=420
 drm.service.enabled=true
 
 # FRP
-ro.frp.pst=/dev/block/bootdevice/by-name/config
+ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # GPS
 persist.backup.ntpServer=0.pool.ntp.org
