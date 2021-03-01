@@ -229,7 +229,7 @@ PRODUCT_BOOT_JARS += oneplus-mock
 
 # Power
 PRODUCT_PACKAGES += \
-    power.qcom:64
+    android.hardware.power-service-qti
 
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
