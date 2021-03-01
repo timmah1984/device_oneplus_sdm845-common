@@ -209,9 +209,6 @@ vendor/etc/camera/ashdr/ncf_pack_imx519.ncf
 vendor/etc/camera/attribute.model
 vendor/etc/camera/vidhance_calibration
 vendor/etc/init/vendor.oneplus.camera.CameraHIDL@1.0-service.rc
-vendor/firmware/CAMERA_ICP.elf
-vendor/firmware/leia_pfp_470.fw
-vendor/firmware/leia_pm4_470.fw
 vendor/lib/camera/GyroOffset_db.config
 vendor/lib/camera/com.qti.sensor.imx371.so
 vendor/lib/camera/com.qti.sensor.imx376k.so
@@ -337,6 +334,11 @@ vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libswvdec.so
 
+# Camera firmware
+vendor/firmware/CAMERA_ICP.elf
+vendor/firmware/leia_pfp_470.fw
+vendor/firmware/leia_pm4_470.fw
+
 # Charger
 vendor/bin/hvdcp_opti
 
@@ -460,6 +462,75 @@ vendor/lib64/libcvpcpuRev_skel.so
 vendor/lib64/vendor.qti.hardware.cvp@1.0-halimpl.so
 vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 
+# DASH
+sbin/dashd:bin/dashd
+
+# Display
+vendor/bin/hw/vendor.oneplus.hardware.display@1.0-service
+vendor/etc/init/vendor.oneplus.hardware.display@1.0-service.rc
+
+# Display (HDR) - LA.UM.9.8.r1-02700-SDM710.0
+vendor/lib64/libhdr_tm.so
+vendor/lib/libhdr_tm.so
+vendor/lib64/libhdr_tm.so
+
+# Display (SDM) - LA.UM.9.8.r1-02700-SDM710.0
+vendor/lib64/libqseed3.so
+vendor/lib64/libsdedrm.so
+vendor/lib64/libsdm-color.so
+vendor/lib64/libsdm-diag.so
+vendor/lib64/libsdm-disp-vndapis.so
+vendor/lib64/libsdmextension.so
+vendor/lib64/libtinyxml2_1.so
+vendor/lib/libqseed3.so
+vendor/lib/libsdedrm.so
+vendor/lib/libsdm-color.so
+vendor/lib/libsdm-diag.so
+vendor/lib/libsdm-disp-vndapis.so
+vendor/lib/libsdmextension.so
+vendor/lib/libtinyxml2_1.so
+vendor/lib64/libqseed3.so
+vendor/lib64/libsdedrm.so
+vendor/lib64/libsdm-color.so
+vendor/lib64/libsdm-diag.so
+vendor/lib64/libsdm-disp-vndapis.so
+vendor/lib64/libsdmextension.so
+vendor/lib64/libtinyxml2_1.so
+
+# Display postprocessing - LA.UM.9.8.r1-02700-SDM710.0
+vendor/bin/hw/vendor.display.color@1.0-service
+vendor/bin/mm-pp-dpps
+vendor/bin/ppd
+vendor/etc/init/vendor.display.color@1.0-service.rc
+vendor/lib64/libdisp-aba.so
+vendor/lib64/libdisplayqos.so
+vendor/lib64/vendor.display.color@1.0.so
+vendor/lib64/vendor.display.color@1.1.so
+vendor/lib64/vendor.display.color@1.2.so
+vendor/lib64/vendor.display.color@1.3.so
+vendor/lib64/vendor.display.color@1.4.so
+vendor/lib64/vendor.display.color@1.5.so
+vendor/lib64/vendor.display.postproc@1.0.so
+vendor/lib/libdisp-aba.so
+vendor/lib/libdisplayqos.so
+vendor/lib/vendor.display.color@1.0.so
+vendor/lib/vendor.display.color@1.1.so
+vendor/lib/vendor.display.color@1.2.so
+vendor/lib/vendor.display.color@1.3.so
+vendor/lib/vendor.display.color@1.4.so
+vendor/lib/vendor.display.color@1.5.so
+vendor/lib/vendor.display.postproc@1.0.so
+vendor/lib64/libdisp-aba.so
+vendor/lib64/libdisplayqos.so
+vendor/lib64/vendor.display.color@1.0.so
+vendor/lib64/vendor.display.color@1.1.so
+vendor/lib64/vendor.display.color@1.2.so
+vendor/lib64/vendor.display.postproc@1.0.so
+
+# Display calibration data
+vendor/etc/qdcm_calib_data_samsung_s6e3fc2x01_cmd_mode_dsi_panel.xml
+vendor/etc/qdcm_calib_data_samsung_sofef03f_m_fhd_cmd_mode_dsc_dsi_panel.xml
+
 # DPM - from instantnoodlep - RP1A.201005.001/2009301800
 system_ext/bin/dpmd|95c1d9e3fd30f17a61fd776c9454a148fa4cf103
 system_ext/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
@@ -555,68 +626,7 @@ vendor/lib64/mediadrm/libwvdrmengine.so|6de9964535b02ae2ce20151350704f90a7d8193e
 vendor/lib64/libwvhidl.so|3e21b09fe7411941454a8055fb05bf1fedd1e0f0
 vendor/lib/mediadrm/libwvdrmengine.so|ba20868c7191c180cb7426d66b64a063b46e0cdb
 
-# DASH
-sbin/dashd:bin/dashd
-
-# Display (HDR) - LA.UM.9.8.r1-02700-SDM710.0
-vendor/lib64/libhdr_tm.so
-vendor/lib/libhdr_tm.so
-vendor/lib64/libhdr_tm.so
-
-# Display (SDM) - LA.UM.9.8.r1-02700-SDM710.0
-vendor/lib64/libqseed3.so
-vendor/lib64/libsdedrm.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-diag.so
-vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libtinyxml2_1.so
-vendor/lib/libqseed3.so
-vendor/lib/libsdedrm.so
-vendor/lib/libsdm-color.so
-vendor/lib/libsdm-diag.so
-vendor/lib/libsdm-disp-vndapis.so
-vendor/lib/libsdmextension.so
-vendor/lib/libtinyxml2_1.so
-vendor/lib64/libqseed3.so
-vendor/lib64/libsdedrm.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-diag.so
-vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libtinyxml2_1.so
-
-# Display postprocessing - LA.UM.9.8.r1-02700-SDM710.0
-vendor/bin/hw/vendor.display.color@1.0-service
-vendor/bin/mm-pp-dpps
-vendor/bin/ppd
-vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/lib64/libdisp-aba.so
-vendor/lib64/libdisplayqos.so
-vendor/lib64/vendor.display.color@1.0.so
-vendor/lib64/vendor.display.color@1.1.so
-vendor/lib64/vendor.display.color@1.2.so
-vendor/lib64/vendor.display.color@1.3.so
-vendor/lib64/vendor.display.color@1.4.so
-vendor/lib64/vendor.display.color@1.5.so
-vendor/lib64/vendor.display.postproc@1.0.so
-vendor/lib/libdisp-aba.so
-vendor/lib/libdisplayqos.so
-vendor/lib/vendor.display.color@1.0.so
-vendor/lib/vendor.display.color@1.1.so
-vendor/lib/vendor.display.color@1.2.so
-vendor/lib/vendor.display.color@1.3.so
-vendor/lib/vendor.display.color@1.4.so
-vendor/lib/vendor.display.color@1.5.so
-vendor/lib/vendor.display.postproc@1.0.so
-vendor/lib64/libdisp-aba.so
-vendor/lib64/libdisplayqos.so
-vendor/lib64/vendor.display.color@1.0.so
-vendor/lib64/vendor.display.color@1.1.so
-vendor/lib64/vendor.display.color@1.2.so
-vendor/lib64/vendor.display.postproc@1.0.so
-
-# ESE - from LA.UM.9.8.r1-02700-SDM710.0
+# ESE-Powermanager - from LA.UM.9.8.r1-02700-SDM710.0
 vendor/bin/hw/vendor.qti.esepowermanager@1.1-service|0de9474912b1206cfe17459afca9ebb28bdd2468
 vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc|3c024c7135ec3dd8658624509ee61396a74f1ede
 vendor/lib/hw/vendor.qti.esepowermanager@1.1-impl.so|7f5adb335d12659d76fa13318b635e30ee67da6e
@@ -625,6 +635,17 @@ vendor/lib/vendor.qti.esepowermanager@1.1.so|a4a91c715665496f44ca27f046865d4ec5c
 vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so|17f648402c874e4f981caadd91438a525089e35d
 vendor/lib64/vendor.qti.esepowermanager@1.0.so|956996730bcb6207c06f37b156bfd9d24db43034
 vendor/lib64/vendor.qti.esepowermanager@1.1.so|8b97297a7d728e37eb7c4da3d0cb8509911fea3b
+
+# Fingerprint
+vendor/bin/qfp-daemon
+vendor/etc/permissions/qti_fingerprint_interface.xml
+vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
+vendor/lib64/libqfp-service.so
+vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
+
+# FM
+vendor/lib/vendor.qti.hardware.fm@1.0.so
+vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
@@ -686,59 +707,6 @@ vendor/lib64/libRSDriver_adreno.so|5f32eff420408fe60d7e14800a213275ce0e0895
 # Graphics (Vulkan) - LA.UM.9.8.r1-02700-SDM710.0
 vendor/lib64/hw/vulkan.adreno.so
 vendor/lib/hw/vulkan.adreno.so
-
-# HotwordEnrollment
--product/priv-app/HotwordEnrollmentOKGoogleWCD9340/HotwordEnrollmentOKGoogleWCD9340.apk|1cbc6ae6490cfc6e16619773809b9afcc9998f91;PRESIGNED
--product/priv-app/HotwordEnrollmentXGoogleWCD9340/HotwordEnrollmentXGoogleWCD9340.apk|24b4885a1f9194c65f378a2afd8e08b4b11842d8;PRESIGNED
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a58554d9c0dd0608552b644fbf74519a447bb
-system_ext/framework/com.android.hotwordenrollment.common.util.jar|bef92589e75a6da6043f85f4b9b0e85866429624
-
-# Fingerprint
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
-vendor/lib/com.fingerprints.extension@1.0.so
-vendor/lib/fp_hal_extension.so
-vendor/lib/fpc_hal_common.so
-vendor/lib/fpc_hal_extension.so
-vendor/lib/fpc_tac.so
-vendor/lib/hw/fingerprint.sdm845.so
-vendor/lib/hw/goodix.fingerprint.sdm845.so
-vendor/lib/libgf_ca.so
-vendor/lib/libgf_hal.so
-vendor/lib/libgf_ud_hal.so
-vendor/lib/libgoodixfingerprintd_binder.so
-vendor/lib/libsl_fp_algo.so
-vendor/lib/libsl_fp_impl.so
-vendor/lib/libsl_fp_impl_util.so
-vendor/lib/libsl_fp_nosec.so
-vendor/lib/libsl_fp_prepro.so
-vendor/lib/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
-vendor/lib64/com.fingerprints.extension@1.0.so
-vendor/lib64/fp_hal_extension.so
-vendor/lib64/fpc_hal_common.so
-vendor/lib64/fpc_hal_extension.so
-vendor/lib64/fpc_tac.so
-vendor/lib64/hw/fingerprint.sdm845.so
-vendor/lib64/hw/goodix.fingerprint.sdm845.so
-vendor/lib64/libgf_ca.so
-vendor/lib64/libgf_hal.so
-vendor/lib64/libgf_ud_hal.so
-vendor/lib64/libgoodixfingerprintd_binder.so
-vendor/lib64/libsl_fp_algo.so
-vendor/lib64/libsl_fp_impl.so
-vendor/lib64/libsl_fp_impl_util.so
-vendor/lib64/libsl_fp_nosec.so
-vendor/lib64/libsl_fp_prepro.so
-vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
-vendor/lib64/vendor.oneplus.fingerprint.extension@1.0.so
-
-# QFingerprint
--vendor/app/QFingerprintService/QFingerprintService.apk
-vendor/bin/qfp-daemon
-vendor/etc/permissions/qti_fingerprint_interface.xml
-vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
-vendor/lib64/libqfp-service.so
-vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
 # GPS certificates
 vendor/etc/xtra_root_cert.pem
@@ -837,6 +805,21 @@ vendor/lib64/vendor.qti.gnss@3.0.so|f13c5fffe0fbe5bfc1384d7449f5820f75104c33
 vendor/lib64/vendor.qti.gnss@4.0-service.so|3c75d133af5193436167380aa89abcf05d079968
 vendor/lib64/vendor.qti.gnss@4.0.so|cc2504016d0ce0afbc58ac95207a4b913f2ccfe9
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so|398e5510db4d739de008b7230aa6e688d6c51a8a
+
+# HBTP
+vendor/etc/hbtp/hbtpcfg.dat
+vendor/etc/hbtp/hbtpcfg_sdm845_800h_qhd.dat
+vendor/etc/hbtp/hbtpcfg_sdm845_800s_4k.dat
+vendor/etc/hbtp/hbtpcfg_sdm845_800s_qhd.dat
+vendor/etc/hbtp/loader.cfg
+vendor/etc/hbtp/qtc800h.bin
+vendor/etc/hbtp/qtc800s_dsp.bin 
+
+# HotwordEnrollment
+-product/priv-app/HotwordEnrollmentOKGoogleWCD9340/HotwordEnrollmentOKGoogleWCD9340.apk|1cbc6ae6490cfc6e16619773809b9afcc9998f91;PRESIGNED
+-product/priv-app/HotwordEnrollmentXGoogleWCD9340/HotwordEnrollmentXGoogleWCD9340.apk|24b4885a1f9194c65f378a2afd8e08b4b11842d8;PRESIGNED
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a58554d9c0dd0608552b644fbf74519a447bb
+system_ext/framework/com.android.hotwordenrollment.common.util.jar|bef92589e75a6da6043f85f4b9b0e85866429624
 
 # IFAA
 vendor/bin/hw/vendor.oneplus.hardware.ifaa@2.0-service
@@ -996,6 +979,20 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so|ae519b1c906e60b66e885922e620f456548
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|6302b61d7d1580254c091cce8ad5e121dbd73ace
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so|25517caf74691b812320b46b477a3f4161cc1bcf
 
+# IO Prefetcher
+vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
+vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
+vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so
+vendor/lib/libqti-iopd-client.so
+vendor/lib/libqti-iopd.so
+vendor/lib/vendor.qti.hardware.iop@1.0.so
+vendor/lib/vendor.qti.hardware.iop@2.0.so
+vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so
+vendor/lib64/libqti-iopd-client.so
+vendor/lib64/libqti-iopd.so
+vendor/lib64/vendor.qti.hardware.iop@1.0.so
+vendor/lib64/vendor.qti.hardware.iop@2.0.so
+
 # IPA firmware
 vendor/firmware/ipa_fws.b00
 vendor/firmware/ipa_fws.b01
@@ -1021,22 +1018,6 @@ vendor/lib64/libgcs-calwrapper.so|d84a7f09c9e99c5b2caa33de89eb96b43ca27109
 vendor/lib64/libgcs-ipc.so|03c1f8407658c102c84f28ece49a2618d3ca3ebd
 vendor/lib64/libgcs-osal.so|e5cd3ed3385b3797a67a8f4519eb59d63ae0a5d4
 vendor/lib64/libgcs.so|39c3cffb161f7ff2f52f046920b1243a9de62965
-
-# Keystore
-vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
-vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
-vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc
-vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so
-vendor/lib/libkeymasterdeviceutils.so
-vendor/lib/libkeymasterprovision.so
-vendor/lib/libkeymasterutils.so
-vendor/lib/libqtikeymaster4.so
-vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
-vendor/lib64/libkeymasterdeviceutils.so
-vendor/lib64/libkeymasterprovision.so
-vendor/lib64/libkeymasterutils.so
-vendor/lib64/libqtikeymaster4.so
-vendor/lib64/vendor.qti.hardware.wifi.keystore@1.0.so
 
 # Media - from LA.UM.9.8.r1-02700-SDM710.0
 -vendor/lib/libMpeg4SwEncoder.so|2ff27b13674b465166ab25938116a882a27430d8
@@ -1101,11 +1082,6 @@ vendor/lib64/libvpptestutils.so|94cf4f767b8244bb5708f06f1479cce769dc5bf8
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so|f7769685d9c0c74f8c8419db028a5d5c3f65a9da
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so|ca1906012d0ab6dc9048aa49703833512308e6cf
 vendor/lib64/vendor.qti.hardware.vpp@1.3.so|99f7054e5a0e9eb214e27cf034785bc446187e20
-
-# Media (C2) - from Crosshatch RQ1A.201205.003
-vendor/bin/hw/vendor.qti.media.c2@1.0-service|c2c578a114ccb404def4bbd7ce159619235c8b9f
-vendor/etc/init/vendor.qti.media.c2@1.0-service.rc|11209316ba8aae64b689217bc13b0804f6620678
-vendor/lib/libqcodec2.so|10765e177d0b269dc3e7e81b36df9f2d53b2f0d9
 
 # Neural networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-qti
@@ -1172,6 +1148,10 @@ vendor/lib64/jcos_nq_client.so|b271b5761373ac6d36fdb08f569bc362fd8638d8
 vendor/lib64/ls_nq_client.so|51f0ea8d81a62d5e775f863f9aedca9ef12af30d
 vendor/lib64/se_nq_extn_client.so|8c2087a41e3df2e3ae6d8715d0fd59650487d43f
 
+# RPM
+vendor/etc/init/vendor.oneplus.hardware.rpmb@1.0-service.rc
+vendor/lib64/vendor.oneplus.hardware.rpmb@1.0.so
+
 # Peripheral manager - from LA.UM.9.8.r1-02700-SDM710.0
 vendor/bin/pm-proxy|832cbe7995de8177a2ef5bdf3f145131dfe828d4
 vendor/bin/pm-service|28f5e8d8f98c8e97941f514bafdc0b369cc5b600
@@ -1181,7 +1161,6 @@ vendor/lib64/libperipheral_client.so|8cb65f4c93719767048dd7b1b845473fe6074ff7
 vendor/lib64/libspcom.so|8bef0f37e62c4c11f2660d8300015d615b023269
 
 # QCC/QDMA - from from LA.UM.9.8.r1-02700-SDM710.0
-
 system_ext/bin/qccsyshalservice|e56b40ea7b0320e3edf1e9054029aa62f863047a
 system_ext/etc/init/vendor.qti.hardware.qccsyshal@1.0-service.rc|a6be39306a3d6c1f6fbe54b59282d11ce12a3319
 system_ext/lib64/vendor.qti.hardware.qccsyshal@1.0-halimpl.so|1720abbe45eb8485cb6775d5700f0a438d4dedc6
@@ -1507,94 +1486,24 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e157937
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|16baab27397ad493e845515c20ac0c0c063c775d
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|5e8423e080be3febc34152508153a58761c17a0f
 
-# Sensors
-#product/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
-#product/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
-#product/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
-etc/sensors/proto/descriptor.proto
-etc/sensors/proto/nanopb.proto
-etc/sensors/proto/qti_gravity.proto
-etc/sensors/proto/sns_accel.proto
-etc/sensors/proto/sns_accel_cal.proto
-etc/sensors/proto/sns_ambient_light.proto
-etc/sensors/proto/sns_ambient_temperature.proto
-etc/sensors/proto/sns_amd.proto
-etc/sensors/proto/sns_aont.proto
-etc/sensors/proto/sns_async_com_port.proto
-etc/sensors/proto/sns_basic_gestures.proto
-etc/sensors/proto/sns_bring_to_ear.proto
-etc/sensors/proto/sns_cal.proto
-etc/sensors/proto/sns_ccd_ttw.proto
-etc/sensors/proto/sns_ccd_walk.proto
-etc/sensors/proto/sns_client.proto
-etc/sensors/proto/sns_cmc.proto
-etc/sensors/proto/sns_cmd.proto
-etc/sensors/proto/sns_da_test.proto
-etc/sensors/proto/sns_dae.proto
-etc/sensors/proto/sns_data_acquisition_engine.proto
-etc/sensors/proto/sns_device_mode.proto
-etc/sensors/proto/sns_device_orient.proto
-etc/sensors/proto/sns_diag.proto
-etc/sensors/proto/sns_diag_sensor.proto
-etc/sensors/proto/sns_distance_bound.proto
-etc/sensors/proto/sns_dpc.proto
-etc/sensors/proto/sns_ext_svc.proto
-etc/sensors/proto/sns_facing.proto
-etc/sensors/proto/sns_fmv.proto
-etc/sensors/proto/sns_fw.proto
-etc/sensors/proto/sns_game_rv.proto
-etc/sensors/proto/sns_geomag_rv.proto
-etc/sensors/proto/sns_gravity.proto
-etc/sensors/proto/sns_gyro.proto
-etc/sensors/proto/sns_gyro_cal.proto
-etc/sensors/proto/sns_gyro_rot_matrix.proto
-etc/sensors/proto/sns_hall.proto
-etc/sensors/proto/sns_heart_beat.proto
-etc/sensors/proto/sns_heart_rate.proto
-etc/sensors/proto/sns_humidity.proto
-etc/sensors/proto/sns_interrupt.proto
-etc/sensors/proto/sns_mag.proto
-etc/sensors/proto/sns_mag_cal.proto
-etc/sensors/proto/sns_mcmd.proto
-etc/sensors/proto/sns_motion_detect.proto
-etc/sensors/proto/sns_multishake.proto
-etc/sensors/proto/sns_oem1.proto
-etc/sensors/proto/sns_offbody_detect.proto
-etc/sensors/proto/sns_op_motion_detect.proto
-etc/sensors/proto/sns_pedometer.proto
-etc/sensors/proto/sns_pedometer_wrist.proto
-etc/sensors/proto/sns_physical_sensor_test.proto
-etc/sensors/proto/sns_pickup.proto
-etc/sensors/proto/sns_pocket.proto
-etc/sensors/proto/sns_pose_6dof.proto
-etc/sensors/proto/sns_ppg.proto
-etc/sensors/proto/sns_pressure.proto
-etc/sensors/proto/sns_proximity.proto
-etc/sensors/proto/sns_psmd.proto
-etc/sensors/proto/sns_registry.proto
-etc/sensors/proto/sns_remote_proc_state.proto
-etc/sensors/proto/sns_resampler.proto
-etc/sensors/proto/sns_rgb.proto
-etc/sensors/proto/sns_rmd.proto
-etc/sensors/proto/sns_rotv.proto
-etc/sensors/proto/sns_sar.proto
-etc/sensors/proto/sns_sensor_temperature.proto
-etc/sensors/proto/sns_sig_motion.proto
-etc/sensors/proto/sns_signal_sensor.proto
-etc/sensors/proto/sns_sim.proto
-etc/sensors/proto/sns_sim_legacy.proto
-etc/sensors/proto/sns_std.proto
-etc/sensors/proto/sns_std_event_gated_sensor.proto
-etc/sensors/proto/sns_std_sensor.proto
-etc/sensors/proto/sns_std_type.proto
-etc/sensors/proto/sns_suid.proto
-etc/sensors/proto/sns_thermopile.proto
-etc/sensors/proto/sns_threshold.proto
-etc/sensors/proto/sns_tilt.proto
-etc/sensors/proto/sns_tilt_to_wake.proto
-etc/sensors/proto/sns_timer.proto
-etc/sensors/proto/sns_ultra_violet.proto
-etc/sensors/proto/sns_wrist_tilt_gesture.proto
+# VPP
+vendor/bin/vppservice
+vendor/etc/configstore/vpp.configstore.xml
+vendor/etc/init/vppservice.rc
+vendor/lib/libvppclient.so
+vendor/lib/libvpphcp.so
+vendor/lib/libvpphvx.so
+vendor/lib/libvpplibrary.so
+vendor/lib/vendor.qti.hardware.vpp@1.1.so
+vendor/lib/vendor.qti.hardware.vpp@1.2.so
+vendor/lib/vendor.qti.hardware.vpp@1.3.so
+vendor/lib64/libvppclient.so
+vendor/lib64/libvpphcp.so
+vendor/lib64/libvpphvx.so
+vendor/lib64/libvpplibrary.so
+vendor/lib64/vendor.qti.hardware.vpp@1.1.so
+vendor/lib64/vendor.qti.hardware.vpp@1.2.so
+vendor/lib64/vendor.qti.hardware.vpp@1.3.so
 
 # WiFi
 vendor/bin/cnss-daemon
@@ -1603,11 +1512,6 @@ vendor/etc/init/vendor.oneplus.hardware.wifi@1.0-service.rc
 vendor/lib64/vendor.oneplus.hardware.wifi@1.0.so
 vendor/lib64/vendor.oneplus.hardware.wifi@1.1.so
 vendor/lib64/vendor.qti.hardware.wifi.keystore@1.0.so
-
-#QTI AV Enhancements
-system_ext/lib/libavenhancements.so
--system_ext/lib/libqct_resampler.so
-system_ext/lib64/libavenhancements.so
 
 # WiFi Display - from instantnoodlep - RP1A.201005.001/2009301800
 -framework/WfdCommon.jar|de1adc7a4adbb117123aa5bb116c5df83c686433
